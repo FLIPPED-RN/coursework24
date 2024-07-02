@@ -1,0 +1,43 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net8.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Model\" />
+      <Folder Include="ModelView\" />
+      <Folder Include="Source\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="View\MainWindow.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.5.1" />
+      <PackageReference Include="MaterialDesignColors" Version="3.1.0" />
+      <PackageReference Include="MaterialDesignExtensions" Version="4.0.0-a02" />
+      <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+      <PackageReference Include="MaterialDesignThemes.MahApps" Version="3.1.0" />
+      <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="9.0.0-preview.5.24306.3" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite.Core" Version="9.0.0-preview.5.24306.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Source\Designer.png" />
+      <Resource Include="Source\Designer.png" />
+    </ItemGroup>
+
+</Project>
