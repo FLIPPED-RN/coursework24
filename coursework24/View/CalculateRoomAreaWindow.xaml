@@ -1,0 +1,12 @@
+<Window x:Class="coursework24.View.CalculateRoomAreaWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Calculate Room Area and Volume" Height="200" Width="400">
+    <Grid>
+        <StackPanel Margin="10">
+            <ComboBox ItemsSource="{Binding RoomNumbers}" SelectedItem="{Binding SelectedRoomNumber}" Margin="5"/>
+            <Button Content="Calculate" Command="{Binding CalculateAreaAndVolumeCommand}" Margin="5"/>
+            <TextBlock Text="{Binding CalculationResult}" Margin="5"/>
+        </StackPanel>
+    </Grid>
+</Window>

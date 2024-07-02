@@ -3,11 +3,11 @@ using coursework24.ViewModels;
 
 namespace coursework24.View;
 
-public partial class MainWindow : Window
+public partial class AddRoomWindow : Window
 {
-    public MainWindow()
+    public AddRoomWindow()
     {
         InitializeComponent();
-        DataContext = new MainViewModel();
+        DataContext = new AddRoomViewModel();
     }
 }
